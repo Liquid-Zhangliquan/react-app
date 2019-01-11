@@ -3,6 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  handleClick = (e) => {
+    alert('hello react');
+  };
   render() {
     return (
       <div className="App">
@@ -19,6 +22,12 @@ class App extends Component {
           >
             Learn React
           </a>
+          <div
+            className="App-button"
+            onClick={this.handleClick}
+          >
+            Click Me
+          </div>
         </header>
       </div>
     );
