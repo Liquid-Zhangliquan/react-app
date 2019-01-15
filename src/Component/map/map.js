@@ -4,7 +4,6 @@ import '../map/map.css';
 
 class MapView extends Component {
     constructor(props, context) {
-        debugger;
         super(props, context);
         this.state = {
             center: [-0.113049, 51.498568],
@@ -13,9 +12,7 @@ class MapView extends Component {
             pitch: 0,
             bearing: 0
         };
-
         this.map = null;
-        //this.MapInit();
     }
 
     //在渲染前调用,在客户端也在服务端。
@@ -54,7 +51,7 @@ class MapView extends Component {
             center: this.state.center,
             zoom: this.state.zoom,
             baseLayer: new maptalks.TileLayer('base', {
-                urlTemplate: 'http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png',
+                urlTemplate: 'http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',
                 subdomains: ['a', 'b', 'c', 'd'],
                 attribution: '&copy; <a href="http://osm.org">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/">CARTO</a>'
             })
@@ -64,7 +61,7 @@ class MapView extends Component {
 
     render() {
         return (
-            <div id="map" className="contanin"></div>
+            <div id="map" className="Map-container"></div>
         )
     }
 }
