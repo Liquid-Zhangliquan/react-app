@@ -1,7 +1,7 @@
 import React from 'react';
 import {Route,Switch,Redirect} from 'react-router-dom';
 import Home from '../pages/home/index';
-import ReactMap from '../pages/react/index';
+import Login from '../pages/login/index';
 
 
 const mainRouter = [
@@ -15,10 +15,10 @@ const mainRouter = [
     },
     {
       name: '图层',
-      key: 'react',
+      key: 'login',
       route: {
-        path: '/react',
-        component: ReactMap
+        path: '/login',
+        component: Login
       }
     }
   ];
@@ -26,7 +26,7 @@ const mainRouter = [
   const routes = (
     <Switch>
       {mainRouter.map((route) => <Route key={route.key} {...route.route} />)}
-      <Redirect to="/home" />
+      <Redirect to="/login" />
     </Switch>
   );
   

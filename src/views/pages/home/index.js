@@ -1,27 +1,23 @@
 import React, { Component } from 'react';
-import logo from '../../../src/logo.svg';
-import '../../../src/App.css';
-import MapView from '../../../src/Component/map/map'
-import Clock from '../../../src/Component/clock/clock';
+import logo from './logo.svg';
+import './index.css';
+import MapView from '../../../Component/map/map'
+import Clock from '../../../Component/clock/clock';
 
 class Index extends Component {
   handleClick = (e) => {
     alert('hello react');
   };
 
-  componentDidMount() {
-    /* eslint-disable no-unused-vars */
-  }
-
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <div className="App-map"><MapView/></div>
-          <img src={logo} className="App-logo" alt="logo" />
+      <div className="Home">
+        <header className="Home-header">
+          <div className="Home-map"><MapView /></div>
+          <img src={logo} className="Home-logo" alt="logo" />
           <div className="Bottom-container">
             <a
-              className="App-link"
+              className="Home-link"
               href="https://reactjs.org"
               target="_blank"
               rel="noopener noreferrer"
@@ -29,7 +25,7 @@ class Index extends Component {
               Learn React
           </a>&nbsp;&nbsp;
             <a
-              className="App-link"
+              className="Home-link"
               href="https://maptalks.org"
               target="_blank"
               rel="noopener noreferrer"
@@ -37,12 +33,12 @@ class Index extends Component {
               Learn Maptalks
           </a>
             <div
-              className="App-button"
+              className="Home-button"
               onClick={this.handleClick}
             >
               Click Me
           </div>
-            <Clock />
+          <Clock />
           </div>
         </header>
       </div>
