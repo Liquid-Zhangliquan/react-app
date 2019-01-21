@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../clock/clock.css'
+import './clock.css'
 class Clock extends Component {
     constructor(props) {
         super(props);
@@ -26,7 +26,7 @@ class Clock extends Component {
     render() {
         return (
             <div className="clock-div">
-                <h2>Now is &nbsp;
+                <h2 style={{ color: '#61dafb' }}>Now is &nbsp;
             {this.state.date.getFullYear()}-
             {this.state.date.getMonth() + 1}-
             {this.state.date.getDate()} &nbsp;

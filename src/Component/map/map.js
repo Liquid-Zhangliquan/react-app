@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import * as maptalks from 'maptalks';
-import '../map/map.css';
+import './map.css';
 
 class MapView extends Component {
     constructor(props, context) {
