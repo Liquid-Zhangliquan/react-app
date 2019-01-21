@@ -22,7 +22,7 @@ function Dialog(props) {
     );
   }
   
-  class SignUpDialog extends React.Component {
+  class SignUpDialog extends Component {
     constructor(props) {
       super(props);
       this.handleChange = this.handleChange.bind(this);

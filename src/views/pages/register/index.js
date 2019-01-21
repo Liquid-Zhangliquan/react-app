@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './index.css';
-import LoginForm from '../../../Component/form/loginform';
+import Registerform from '../../../Component/form/registerform';
 
 export default class Index extends Component {
 
@@ -10,7 +10,7 @@ export default class Index extends Component {
   render() {
     return (
       <div className="Login-contain">
-        <LoginForm></LoginForm>
+        <Registerform></Registerform>
       </div>
     );
   }

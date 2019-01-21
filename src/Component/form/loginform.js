@@ -73,14 +73,14 @@ class NormalLoginForm extends React.Component {
                     <FormItem>
                         <a
                             className="login-form-forgot"
-                            href="https://reactjs.org"
+                            href="#/findpassword"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
                             Forgot password
                         </a>
                         Or <a
-                            href="https://maptalks.org"
+                            href="#/register"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
