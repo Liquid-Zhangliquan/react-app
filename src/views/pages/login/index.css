@@ -10,3 +10,16 @@
     font-size: calc(10px + 2vmin);
     color: white;
   }
+  .loginform-contain{
+    background-image: url(./login_form.png);
+    background-size: 350px 330px;
+    background-repeat:no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    width: 350px;
+    height: 380px;
+  }
