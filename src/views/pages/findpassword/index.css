@@ -1,6 +1,6 @@
-.Login-contain {
+.Findpws-contain {
     background-color: #282c34;
-    background: url(./login.jpg) center no-repeat;
+    background: url(../../../images/login/login_color.jpg) center no-repeat;
     background-size: cover;
     min-height: 100vh;
     display: flex;

@@ -1,6 +1,6 @@
 .Login-contain {
     background-color: #282c34;
-    background: url(./login.jpg) center no-repeat;
+    background: url(../../../images/login/login_earth.jpg) center no-repeat;
     background-size: cover;
     min-height: 100vh;
     display: flex;
@@ -11,7 +11,7 @@
     color: white;
   }
   .loginform-contain{
-    background-image: url(./login_form.png);
+    background-image: url(../../../images/login/login_form.png);
     background-size: 350px 330px;
     background-repeat:no-repeat;
     display: flex;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './index.css';
 import LoginForm from '../../../Component/form/loginform';
+import './index.css';
 
 export default class Index extends Component {
 

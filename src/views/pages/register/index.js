@@ -9,7 +9,7 @@ export default class Index extends Component {
   }
   render() {
     return (
-      <div className="Login-contain">
+      <div className="Register-contain">
         <Registerform></Registerform>
       </div>
     );

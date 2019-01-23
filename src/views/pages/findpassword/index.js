@@ -9,7 +9,7 @@ export default class Index extends Component {
   }
   render() {
     return (
-      <div className="Login-contain">
+      <div className="Findpws-contain">
         <Findform></Findform>
       </div>
     );
