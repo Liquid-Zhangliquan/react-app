@@ -21,12 +21,29 @@ class NormalLoginForm extends React.Component {
         e.preventDefault();
         debugger;
         let data = this.props.form.getFieldsValue();
-        let history = this.context.router.history
-        if (data.userName === 'zlq' && data.passWord === '123') {
-            history.push('/home');
-        } else {
-            alert("密码错误");
-        }
+        let history = this.context.router.history;
+        fetch(`http://localhost:8084/userdb/login`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: `data=${JSON.stringify(data)}`
+        })
+            .then(res => res.json())
+            .then(json => {
+                console.log(json);
+                if (json.length !== 0) {
+                    history.push('/home');
+                } else {
+                    alert("账户名或密码错误");
+                }
+            })
+
+        // if (data.userName === 'zlq' && data.passWord === '123') {
+        //     history.push('/home');
+        // } else {
+        //     alert("密码错误");
+        // }
         // axios.post("/users",data).then(function(res){
         //     let resMsg = res.data.data;
         //     if(resMsg.name === "lily" && resMsg.password==="1"){
