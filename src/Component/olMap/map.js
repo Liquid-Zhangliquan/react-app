@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
-import * as maptalks from 'maptalks';
+import Map from 'ol/Map.js';
+import View from 'ol/View.js';
+import { defaults as defaultControls, ScaleLine } from 'ol/control.js';
+import TileLayer from 'ol/layer/Tile.js';
+import TileWMS from 'ol/source/TileWMS.js';
 import './map.css';
 
 class MapView extends Component {
@@ -47,16 +51,32 @@ class MapView extends Component {
     }
 
     MapInit() {
-        this.map = new maptalks.Map('map', {
-            center: this.state.center,
-            zoom: this.state.zoom,
-            baseLayer: new maptalks.TileLayer('base', {
-                urlTemplate: 'http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',
-                subdomains: ['a', 'b', 'c', 'd'],
-                attribution: '&copy; <a href="http://osm.org">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/">CARTO</a>',
-                renderer: 'canvas'
+        let layers = [
+            new TileLayer({
+                source: new TileWMS({
+                    url: 'https://ahocevar.com/geoserver/wms',
+                    params: {
+                        'LAYERS': 'ne:NE1_HR_LC_SR_W_DR',
+                        'TILED': true
+                    }
+                })
             })
-        })
+        ];
+
+        new Map({
+            controls: defaultControls().extend([
+                new ScaleLine({
+                    units: 'degrees'
+                })
+            ]),
+            layers: layers,
+            target: 'map',
+            view: new View({
+                projection: 'EPSG:4326',
+                center: [0, 0],
+                zoom: 2
+            })
+        });
 
     }
 

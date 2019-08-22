@@ -6,7 +6,8 @@
   "dependencies": {
     "antd": "^3.12.3",
     "maptalks": "^0.42.2",
-    "npm": "^6.5.0",
+    "npm": "^6.11.1",
+    "ol": "^5.3.3",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-hot-loader": "^4.6.3",
