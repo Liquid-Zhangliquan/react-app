@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './index.css';
-// import MapView from '../../../Component/map/map'
-import MapView from '../../../Component/olMap/map'
+import MapView from '../../../Component/map/map'
 import Clock from '../../../Component/clock/clock';
 
 class Index extends Component {

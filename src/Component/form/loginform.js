@@ -41,6 +41,8 @@ class NormalLoginForm extends React.Component {
 
         if (data.userName === 'zlq' && data.passWord === '123') {
             history.push('/home');
+        } else if (data.userName === 'ol5' && data.passWord === '123') {
+            history.push('/olmap');
         } else {
             message.info('密码错误');
         }

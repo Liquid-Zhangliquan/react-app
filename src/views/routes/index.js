@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react';
 import { Route, Switch, HashRouter } from 'react-router-dom';
 import Home from '../pages/home/index';
+import OlMap from '../pages/ol5map';
 import Login from '../pages/login/index'
 import Register from '../pages/register/index'
 import Findpassword from '../pages/findpassword/index'
@@ -38,6 +39,7 @@ const routes = (
           <Route path="/register" component={Register} />
           <Route path="/findpassword" component={Findpassword} />
           <Route path="/home" component={Home} />
+          <Route path="/olmap" component={OlMap} />
         </div>
       </HashRouter>
     </Switch>
