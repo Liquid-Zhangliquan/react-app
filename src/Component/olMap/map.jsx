@@ -4,7 +4,6 @@ import View from 'ol/View.js';
 import { defaults as defaultControls, ScaleLine } from 'ol/control.js';
 import TileLayer from 'ol/layer/Tile.js';
 import TileWMS from 'ol/source/TileWMS.js';
-import 'ol/ol.css'
 import './map.css';
 
 class MapView extends Component {
