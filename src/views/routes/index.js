@@ -1,10 +1,10 @@
 import React, { Suspense } from 'react';
 import { Route, Switch, HashRouter } from 'react-router-dom';
-import Home from '../pages/home/index';
+import Home from '../pages/home';
 import OlMap from '../pages/ol5map';
-import Login from '../pages/login/index'
-import Register from '../pages/register/index'
-import Findpassword from '../pages/findpassword/index'
+import Login from '../pages/login'
+import Register from '../pages/register'
+import Findpassword from '../pages/findpassword'
 
 // const Home = lazy(() => import('../pages/home/index'));
 // const Login = lazy(() => import('../pages/login/index'));
